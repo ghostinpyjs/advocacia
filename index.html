@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva & Associados | Advocacia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">⚖️ Silva & Associados</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#atuacao">Áreas de Atuação</a></li>
+                <li><a href="#cadastro" class="btn-destaque">Agendar Consulta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Justiça, Ética e Excelência.</h1>
+            <p>Defendemos seus direitos com dedicação exclusiva e profissionais altamente capacitados.</p>
+            <a href="#cadastro" class="btn-primary">Fale com um Advogado</a>
+        </div>
+    </section>
+
+    <section id="atuacao" class="services">
+        <h2>Nossas Áreas de Atuação</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Direito Civil</h3>
+                <p>Resolução de conflitos, contratos, responsabilidade civil e direito de família.</p>
+            </div>
+            <div class="card">
+                <h3>Direito Trabalhista</h3>
+                <p>Defesa dos direitos do trabalhador, rescisões, horas extras e assédio moral.</p>
+            </div>
+            <div class="card">
+                <h3>Direito Empresarial</h3>
+                <p>Assessoria jurídica para empresas, contratos comerciais e societários.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cadastro" class="database-section">
+        <div class="form-container">
+            <h2>Agende sua Consulta</h2>
+            <p>Preencha os dados e nosso sistema registrará seu caso.</p>
+            <form id="clientForm">
+                <input type="text" id="nome" placeholder="Nome Completo" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="tel" id="telefone" placeholder="Telefone" required>
+                <select id="area" required>
+                    <option value="" disabled selected>Selecione a área do caso...</option>
+                    <option value="Civil">Direito Civil</option>
+                    <option value="Trabalhista">Direito Trabalhista</option>
+                    <option value="Empresarial">Direito Empresarial</option>
+                    <option value="Outros">Outros</option>
+                </select>
+                <textarea id="descricao" placeholder="Descreva brevemente sua situação..." rows="4" required></textarea>
+                <button type="submit" class="btn-primary">Registrar Caso</button>
+            </form>
+        </div>
+
+        <div class="admin-panel">
+            <h2>Painel do Advogado (Banco de Dados Local)</h2>
+            <p>Os clientes cadastrados aparecerão aqui.</p>
+            <div class="table-container">
+                <table id="clientTable">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Contato</th>
+                            <th>Área</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clientList">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Silva & Associados. Todos os direitos reservados. Projeto de Portfólio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
